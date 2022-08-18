@@ -186,4 +186,25 @@ h6 {
   border-radius: 2px;
 }
 
+.button__submit {
+  padding-top: 14px;
+  padding-bottom: 16px;
+  padding-left: 182px;
+  padding-right: 182px;
+  font-family: "Lato", sans-serif;
+  line-height: 112%;
+  color: var(--white);
+  background-color: var(--pink);
+  border-radius: 4px;
+  border: 1px solid var(--pink);
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.button__cancel {
+  line-height: 150%;
+  color: var(--blue);
+  background-color: var(--white);
+  border: 0;
+}
+
 /*# sourceMappingURL=index.css.map */
