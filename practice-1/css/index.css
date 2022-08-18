@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@800&family=PT+Sans:wght@400;700&display=swap");
 :root {
   --white: #ffffff;
+  --white-2: #d6dade;
   --black: #0c1014;
   --pink: #e5266e;
   --blue: #0848c0;
@@ -108,22 +109,6 @@ h6 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 425px) {
-  .modal__window {
-    width: 300px;
-    padding: 20px 30px 20px 30px;
-  }
-}
-.modal__mark {
-  position: absolute;
-  left: 90%;
-  bottom: 87%;
-}
-@media screen and (max-width: 425px) {
-  .modal__mark {
-    bottom: 89%;
-  }
-}
 .modal__title {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
@@ -138,6 +123,43 @@ h6 {
   color: var(--black);
   display: flex;
   flex-direction: column;
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal__group {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.modal__image {
+  background-color: var(--white);
+}
+.modal__image p {
+  font-size: 0.875rem;
+  line-height: 133%;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 12px;
+  text-align: center;
+  color: var(--grey);
+}
+.modal__image p span {
+  color: var(--red);
+}
+.modal__image svg {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  position: absolute;
+  right: 18%;
+}
+.modal__image img {
+  width: 162px;
+  height: 162px;
+  border-radius: 60%;
 }
 
 .text-group {
@@ -155,6 +177,13 @@ h6 {
   color: var(--red);
   font-size: 0.75rem;
   line-height: 133%;
+}
+.text-group__input > input {
+  padding-top: 22px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  border: 1px solid var(--white-2);
+  border-radius: 2px;
 }
 
 /*# sourceMappingURL=index.css.map */
