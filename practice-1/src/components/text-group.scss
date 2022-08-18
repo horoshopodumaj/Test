@@ -7,6 +7,7 @@
         position: absolute;
         top: 8px;
         left: 16px;
+        z-index: 12;
     }
     & span {
         color: var(--red);
@@ -14,11 +15,19 @@
         line-height: 133%;
     }
 
-    &__input > input {
-        padding-top: 22px;
-        padding-left: 16px;
-        padding-bottom: 8px;
-        border: 1px solid var(--white-2);
-        border-radius: 2px;
+    &__input {
+        display: inline-flex;
+        position: relative;
+        width: 100%;
+
+        & > input {
+            padding-top: 22px;
+            padding-left: 16px;
+            padding-bottom: 8px;
+            padding-right: 0;
+            border: 1px solid var(--white-2);
+            border-radius: 2px;
+            width: 100%;
+        }
     }
 }

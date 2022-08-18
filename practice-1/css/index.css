@@ -126,13 +126,14 @@ h6 {
 }
 .modal__header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  margin-bottom: 32px;
 }
 .modal__group {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  flex-basis: 362px;
 }
 .modal__image {
   background-color: var(--white);
@@ -154,7 +155,7 @@ h6 {
   height: 37px;
   border-radius: 50%;
   position: absolute;
-  right: 18%;
+  right: 15%;
 }
 .modal__image img {
   width: 162px;
@@ -172,18 +173,26 @@ h6 {
   position: absolute;
   top: 8px;
   left: 16px;
+  z-index: 12;
 }
 .text-group span {
   color: var(--red);
   font-size: 0.75rem;
   line-height: 133%;
 }
+.text-group__input {
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+}
 .text-group__input > input {
   padding-top: 22px;
   padding-left: 16px;
   padding-bottom: 8px;
+  padding-right: 0;
   border: 1px solid var(--white-2);
   border-radius: 2px;
+  width: 100%;
 }
 
 .button__submit {
@@ -199,6 +208,7 @@ h6 {
   border: 1px solid var(--pink);
   margin-top: 50px;
   margin-bottom: 15px;
+  white-space: nowrap;
 }
 .button__cancel {
   line-height: 150%;
