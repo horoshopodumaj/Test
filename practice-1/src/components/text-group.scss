@@ -30,4 +30,47 @@
             width: 100%;
         }
     }
+
+    &__global {
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+
+    &__vk {
+        width: 19px;
+        height: 19px;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+
+    &__facebook {
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+
+    &__info {
+        display: inline-flex;
+        position: relative;
+        width: 100%;
+
+        & > input {
+            padding-top: 15px;
+            padding-left: 16px;
+            padding-bottom: 15px;
+            padding-right: 0;
+            border: 1px solid var(--white-2);
+            border-radius: 2px;
+            width: 100%;
+        }
+    }
 }
