@@ -1,0 +1,16 @@
+.text-group {
+    position: relative;
+    &__label {
+        color: var(--grey);
+        font-size: 0.75rem;
+        line-height: 133%;
+        position: absolute;
+        top: 8px;
+        left: 16px;
+    }
+    & span {
+        color: var(--red);
+        font-size: 0.75rem;
+        line-height: 133%;
+    }
+}

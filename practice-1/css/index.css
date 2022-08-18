@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@800&family=PT+Sans:wght@400;700&display=swap");
+:root {
+  --white: #ffffff;
+  --black: #0c1014;
+  --pink: #e5266e;
+  --blue: #0848c0;
+  --grey: #6a6e72;
+  --red: #d90000;
+}
+
+html,
+body {
+  font-family: "PT Sans", sans-serif;
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 16px;
+  background-color: var(--white);
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-size: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.page__box {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1040px) {
+  .page__box {
+    padding: 0 16px;
+  }
+}
+
+.main {
+  flex: 1;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.42);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+.modal__window {
+  position: absolute;
+  height: auto;
+  background: var(--white);
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 53px 98px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 425px) {
+  .modal__window {
+    width: 300px;
+    padding: 20px 30px 20px 30px;
+  }
+}
+.modal__mark {
+  position: absolute;
+  left: 90%;
+  bottom: 87%;
+}
+@media screen and (max-width: 425px) {
+  .modal__mark {
+    bottom: 89%;
+  }
+}
+.modal__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 1.75rem;
+  line-height: 121%;
+  color: var(--black);
+  margin-bottom: 35px;
+}
+.modal__content {
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+}
+
+.text-group {
+  position: relative;
+}
+.text-group__label {
+  color: var(--grey);
+  font-size: 0.75rem;
+  line-height: 133%;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.text-group span {
+  color: var(--red);
+  font-size: 0.75rem;
+  line-height: 133%;
+}
+
+/*# sourceMappingURL=index.css.map */
