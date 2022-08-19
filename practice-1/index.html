@@ -27,7 +27,7 @@
                                 Стать партнёром проекта
                             </div>
                             <div class="modal__content">
-                                <form action="">
+                                <form action="#">
                                     <div class="modal__header">
                                         <div class="modal__group">
                                             <div class="text-group">
@@ -60,15 +60,23 @@
                                             <p>
                                                 <span>✱</span> Логотип (jpeg, png)
                                             </p>
-                                            <svg>
+                                            <svg class="modal__icon">
                                                 <use
                                                     xlink:href="./img/sprite-icons.svg#icon"
                                                 ></use>
                                             </svg>
-                                            <!-- <div class="modal__form">
-                                                <label for="">Выберите файл</label>
-                                                <input type="file" />
-                                            </div> -->
+                                            <div class="modal__form">
+                                                <label for="file">
+                                                    <svg>
+                                                        <use
+                                                            xlink:href="./img/sprite-icons.svg#file"
+                                                        ></use>
+                                                    </svg>
+                                                    <span>Выберите</span>
+                                                    <span>файл</span>
+                                                </label>
+                                                <input id="file" type="file" required />
+                                            </div>
                                             <img src="./img/image.png" />
                                         </div>
                                     </div>
@@ -88,11 +96,6 @@
                                                 Сельское хозяйство
                                             </option>
                                         </select>
-                                        <!-- <svg class="text-group__select">
-                                            <use
-                                                xlink:href="./img/sprite-icons.svg#select"
-                                            ></use>
-                                        </svg> -->
                                     </div>
                                     <div class="modal__body">
                                         <div class="text-group">
