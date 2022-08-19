@@ -97,6 +97,7 @@ h6 {
   height: 100%;
   width: 100%;
   z-index: 100;
+  overflow: auto;
 }
 .modal__window {
   position: absolute;
@@ -105,7 +106,7 @@ h6 {
   border-radius: 8px;
   box-sizing: border-box;
   padding: 53px 98px;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -167,6 +168,33 @@ h6 {
   flex-direction: column;
   gap: 32px;
 }
+.modal__select {
+  margin-bottom: 32px;
+  position: relative;
+}
+.modal__select select {
+  display: block;
+  padding-top: 22px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  padding-right: 0;
+  border: 1px solid var(--white-2);
+  border-radius: 2px;
+  width: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../../img/select.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 1em auto, 100%;
+}
+.modal__select select::-ms-expand {
+  display: none;
+}
+.modal__select select option {
+  font-family: "PT Sans", sans-serif;
+}
 
 .text-group {
   position: relative;
@@ -180,7 +208,7 @@ h6 {
   left: 16px;
   z-index: 12;
 }
-.text-group span {
+.text-group__label span {
   color: var(--red);
   font-size: 0.75rem;
   line-height: 133%;
@@ -236,6 +264,14 @@ h6 {
   border: 1px solid var(--white-2);
   border-radius: 2px;
   width: 100%;
+}
+.text-group__select {
+  width: 16px;
+  height: 23px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
 }
 
 .button__submit {

@@ -7,6 +7,7 @@
     height: 100%;
     width: 100%;
     z-index: 100;
+    overflow: auto;
 
     &__window {
         position: absolute;
@@ -15,7 +16,7 @@
         border-radius: 8px;
         box-sizing: border-box;
         padding: 53px 98px;
-        top: 50%;
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -85,5 +86,34 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
+    }
+
+    &__select {
+        margin-bottom: 32px;
+        position: relative;
+
+        & select {
+            display: block;
+            padding-top: 22px;
+            padding-left: 16px;
+            padding-bottom: 8px;
+            padding-right: 0;
+            border: 1px solid var(--white-2);
+            border-radius: 2px;
+            width: 100%;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            background-image: url("../../img/select.svg");
+            background-repeat: no-repeat, repeat;
+            background-position: right 0.7em top 50%, 0 0;
+            background-size: 1em auto, 100%;
+            &::-ms-expand {
+                display: none;
+            }
+            & option {
+                font-family: $main-front;
+            }
+        }
     }
 }

@@ -8,11 +8,11 @@
         top: 8px;
         left: 16px;
         z-index: 12;
-    }
-    & span {
-        color: var(--red);
-        font-size: 0.75rem;
-        line-height: 133%;
+        & span {
+            color: var(--red);
+            font-size: 0.75rem;
+            line-height: 133%;
+        }
     }
 
     &__input {
@@ -72,5 +72,14 @@
             border-radius: 2px;
             width: 100%;
         }
+    }
+
+    &__select {
+        width: 16px;
+        height: 23px;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
     }
 }

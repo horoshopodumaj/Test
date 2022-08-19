@@ -31,7 +31,7 @@
                                                 организации</label
                                             >
                                             <div class="text-group__input">
-                                                <input type="text" />
+                                                <input type="text" required />
                                             </div>
                                         </div>
                                         <div class="text-group">
@@ -39,7 +39,7 @@
                                                 ><span>✱</span> Телефон</label
                                             >
                                             <div class="text-group__input">
-                                                <input type="text" />
+                                                <input type="tel" required />
                                             </div>
                                         </div>
                                         <div class="text-group">
@@ -47,7 +47,7 @@
                                                 ><span>✱</span> E-mail</label
                                             >
                                             <div class="text-group__input">
-                                                <input type="text" />
+                                                <input type="email" required />
                                             </div>
                                         </div>
                                     </div>
@@ -67,12 +67,28 @@
                                         <img src="./img/image.png" />
                                     </div>
                                 </div>
-                                <select name="#" id="#">
-                                    <option value="Экология">Экология</option>
-                                    <option value="">Реклама</option>
-                                    <option value="">Машиностроение</option>
-                                    <option value="">Сельское хозяйство</option>
-                                </select>
+                                <div class="modal__select">
+                                    <label
+                                        class="text-group__label"
+                                        for="select"
+                                        ><span>✱</span> Направление</label
+                                    >
+                                    <select name="#" id="select" required>
+                                        <option value="Экология">
+                                            Экология
+                                        </option>
+                                        <option value="">Реклама</option>
+                                        <option value="">Машиностроение</option>
+                                        <option value="">
+                                            Сельское хозяйство
+                                        </option>
+                                    </select>
+                                    <!-- <svg class="text-group__select">
+                                        <use
+                                            xlink:href="./img/sprite-icons.svg#select"
+                                        ></use>
+                                    </svg> -->
+                                </div>
                                 <div class="modal__body">
                                     <div class="text-group">
                                         <div class="text-group__info">
@@ -133,6 +149,14 @@
                                                 xlink:href="./img/sprite-icons.svg#youtube"
                                             ></use>
                                         </svg>
+                                    </div>
+                                    <div class="text-group">
+                                        <label class="text-group__label"
+                                            >Руководитель</label
+                                        >
+                                        <div class="text-group__input">
+                                            <input type="text" />
+                                        </div>
                                     </div>
                                 </div>
                                 <button
