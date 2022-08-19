@@ -1,2 +1,17 @@
 .footer {
+    &__tags {
+        display: flex;
+        gap: 15px;
+        width: 50%;
+        flex-wrap: wrap;
+    }
+
+    &__tag {
+        background-color: var(--blue);
+        font-size: 14px;
+        text-align: center;
+        color: var(--white);
+        border: 1px solid var(--blue);
+        padding: 5px 10px;
+    }
 }

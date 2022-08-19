@@ -89,6 +89,21 @@ h6 {
   flex: 1;
 }
 
+.footer__tags {
+  display: flex;
+  gap: 15px;
+  width: 50%;
+  flex-wrap: wrap;
+}
+.footer__tag {
+  background-color: var(--blue);
+  font-size: 14px;
+  text-align: center;
+  color: var(--white);
+  border: 1px solid var(--blue);
+  padding: 5px 10px;
+}
+
 .modal {
   background-color: rgba(0, 0, 0, 0.42);
   position: absolute;
@@ -290,6 +305,25 @@ h6 {
   color: var(--blue);
   background-color: var(--white);
   border: 0;
+}
+.button__main {
+  width: 147px;
+  height: 48px;
+  line-height: 112%;
+  font-weight: 600;
+  color: var(--pink);
+  border: 1px solid var(--pink);
+  border-radius: 4px;
+  font-family: "Lato";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__title {
+  text-align: center;
+  font-size: 36px;
 }
 
 /*# sourceMappingURL=index.css.map */

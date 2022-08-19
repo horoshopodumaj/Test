@@ -21,4 +21,19 @@
         background-color: var(--white);
         border: 0;
     }
+
+    &__main {
+        width: 147px;
+        height: 48px;
+        line-height: 112%;
+        font-weight: 600;
+        color: var(--pink);
+        border: 1px solid var(--pink);
+        border-radius: 4px;
+        font-family: "Lato";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
