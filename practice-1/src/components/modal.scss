@@ -1,24 +1,40 @@
 .modal {
     display: none;
     background-color: rgba(0, 0, 0, 0.42);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    right: 0;
+    bottom: 0;
     z-index: 100;
-    overflow: auto;
+    overflow: hidden;
+    overflow-y: auto;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
 
     &__window {
-        position: absolute;
-        height: auto;
         background: var(--white);
         border-radius: 8px;
         box-sizing: border-box;
         padding: 53px 98px;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin: auto;
+        max-width: 90%;
+
+        @media screen and (max-width: 460px) {
+            padding: 20px 25px;
+        }
+
+        @media screen and (max-width: 575px) and (min-width: 461px) {
+            padding: 30px 60px;
+        }
+        @media screen and (max-width: 767px) and (min-width: 576px) {
+            padding: 40px 65px;
+        }
+
+        @media screen and (max-width: 992px) and (min-width: 768px) {
+            padding: 45px 75px;
+        }
     }
 
     &__title {
@@ -39,8 +55,16 @@
 
     &__header {
         display: flex;
-        gap: 32px;
+        gap: 30px;
         margin-bottom: 32px;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column-reverse;
+        }
+
+        @media screen and (max-width: 992px) and (min-width: 768px) {
+            gap: 10px;
+        }
     }
 
     &__group {
@@ -48,6 +72,14 @@
         flex-direction: column;
         gap: 32px;
         flex-basis: 362px;
+        @media screen and (max-width: 767px) {
+            flex: 1 0 auto;
+        }
+
+        @media screen and (max-width: 992px) and (min-width: 768px) {
+            margin-right: 15px;
+            flex: 1 0 auto;
+        }
     }
     &__icon {
         width: 37px;
@@ -56,11 +88,25 @@
         position: absolute;
         right: -10%;
         z-index: 5;
+
+        @media screen and (max-width: 361px) and (min-width: 320px) {
+            right: 22%;
+        }
+
+        @media screen and (max-width: 767px) and (min-width: 362px) {
+            right: 30%;
+        }
+
+        @media screen and (max-width: 992px) and (min-width: 768px) {
+            right: 5%;
+        }
     }
 
     &__image {
         background-color: var(--white);
         position: relative;
+        @media screen and (max-width: 425px) {
+        }
 
         & p {
             font-size: 0.875rem;
@@ -81,6 +127,15 @@
             height: 162px;
             border-radius: 50%;
             position: absolute;
+            @media screen and (max-width: 767px) {
+                display: block;
+                margin: 0 auto;
+                position: static;
+            }
+            @media screen and (max-width: 992px) and (min-width: 768px) {
+                width: 130px;
+                height: 130px;
+            }
         }
     }
 
@@ -136,6 +191,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            @media screen and (max-width: 767px) {
+                top: 60%;
+                left: 50%;
+            }
+            @media screen and (max-width: 992px) and (min-width: 768px) {
+                left: 50%;
+                top: 50%;
+            }
 
             &:hover {
                 text-decoration: underline;

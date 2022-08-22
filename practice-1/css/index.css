@@ -107,24 +107,45 @@ h6 {
 .modal {
   display: none;
   background-color: rgba(0, 0, 0, 0.42);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  right: 0;
+  bottom: 0;
   z-index: 100;
-  overflow: auto;
+  overflow: hidden;
+  overflow-y: auto;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 .modal__window {
-  position: absolute;
-  height: auto;
   background: var(--white);
   border-radius: 8px;
   box-sizing: border-box;
   padding: 53px 98px;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  max-width: 90%;
+}
+@media screen and (max-width: 460px) {
+  .modal__window {
+    padding: 20px 25px;
+  }
+}
+@media screen and (max-width: 575px) and (min-width: 461px) {
+  .modal__window {
+    padding: 30px 60px;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 576px) {
+  .modal__window {
+    padding: 40px 65px;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .modal__window {
+    padding: 45px 75px;
+  }
 }
 .modal__title {
   font-family: "Montserrat", sans-serif;
@@ -143,14 +164,35 @@ h6 {
 }
 .modal__header {
   display: flex;
-  gap: 32px;
+  gap: 30px;
   margin-bottom: 32px;
+}
+@media screen and (max-width: 767px) {
+  .modal__header {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .modal__header {
+    gap: 10px;
+  }
 }
 .modal__group {
   display: flex;
   flex-direction: column;
   gap: 32px;
   flex-basis: 362px;
+}
+@media screen and (max-width: 767px) {
+  .modal__group {
+    flex: 1 0 auto;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .modal__group {
+    margin-right: 15px;
+    flex: 1 0 auto;
+  }
 }
 .modal__icon {
   width: 37px;
@@ -159,6 +201,21 @@ h6 {
   position: absolute;
   right: -10%;
   z-index: 5;
+}
+@media screen and (max-width: 361px) and (min-width: 320px) {
+  .modal__icon {
+    right: 22%;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 362px) {
+  .modal__icon {
+    right: 30%;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .modal__icon {
+    right: 5%;
+  }
 }
 .modal__image {
   background-color: var(--white);
@@ -181,6 +238,19 @@ h6 {
   height: 162px;
   border-radius: 50%;
   position: absolute;
+}
+@media screen and (max-width: 767px) {
+  .modal__image img {
+    display: block;
+    margin: 0 auto;
+    position: static;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .modal__image img {
+    width: 130px;
+    height: 130px;
+  }
 }
 .modal__body {
   display: flex;
@@ -230,6 +300,18 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .modal__form label {
+    top: 60%;
+    left: 50%;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .modal__form label {
+    left: 50%;
+    top: 50%;
+  }
 }
 .modal__form label:hover {
   text-decoration: underline;
@@ -328,6 +410,19 @@ h6 {
   margin-top: 50px;
   margin-bottom: 15px;
   white-space: nowrap;
+  min-width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .button__submit {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .button__submit {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
 }
 .button__cancel {
   line-height: 150%;

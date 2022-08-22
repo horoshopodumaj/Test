@@ -13,6 +13,17 @@
         margin-top: 50px;
         margin-bottom: 15px;
         white-space: nowrap;
+        min-width: 100%;
+
+        @media screen and (max-width: 767px) {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        @media screen and (max-width: 992px) and (min-width: 768px) {
+            padding-left: 90px;
+            padding-right: 90px;
+        }
     }
 
     &__cancel {

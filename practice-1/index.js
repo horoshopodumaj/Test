@@ -8,18 +8,18 @@
     }
 
     modalOpen.addEventListener("click", () => {
-        modal.style.display = "block";
-        document.body.overflow = "hidden";
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
         document.body.addEventListener("keydown", (event) => {
             if (event.code === "Escape") {
                 modal.style.display = "none";
-                document.body.overflow = "initial";
+                document.body.style.overflow = "initial";
             }
         });
     });
 
     close.addEventListener("click", () => {
         modal.style.display = "none";
-        document.body.overflow = "initial";
+        document.body.style.overflow = "initial";
     });
 })();
