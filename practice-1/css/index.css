@@ -217,11 +217,7 @@ h6 {
     right: 5%;
   }
 }
-.modal__image {
-  background-color: var(--white);
-  position: relative;
-}
-.modal__image p {
+.modal__hint {
   font-size: 0.875rem;
   line-height: 133%;
   font-weight: 700;
@@ -230,8 +226,12 @@ h6 {
   text-align: center;
   color: var(--grey);
 }
-.modal__image p span {
+.modal__hint span {
   color: var(--red);
+}
+.modal__image {
+  background-color: var(--white);
+  position: relative;
 }
 .modal__image img {
   width: 162px;
@@ -288,7 +288,7 @@ h6 {
   visibility: hidden;
   position: absolute;
 }
-.modal__form label {
+.modal__file {
   font-size: 18.67px;
   line-height: 116%;
   position: absolute;
@@ -302,28 +302,39 @@ h6 {
   align-items: center;
 }
 @media screen and (max-width: 767px) {
-  .modal__form label {
+  .modal__file {
     top: 60%;
     left: 50%;
   }
 }
 @media screen and (max-width: 992px) and (min-width: 768px) {
-  .modal__form label {
+  .modal__file {
     left: 50%;
     top: 50%;
   }
 }
-.modal__form label:hover {
+.modal__file:hover {
   text-decoration: underline;
 }
-.modal__form label span {
+.modal__file span {
   display: block;
 }
-.modal__form label svg {
+.modal__file svg {
   display: block;
   width: 30px;
   height: 30px;
   padding-bottom: 7px;
+}
+.modal__error {
+  margin: 0;
+  font-size: 14px;
+  color: var(--red);
+  white-space: nowrap;
+}
+@media screen and (max-width: 767px) {
+  .modal__error {
+    text-align: center;
+  }
 }
 
 .text-group {
@@ -394,6 +405,10 @@ h6 {
   border: 1px solid var(--white-2);
   border-radius: 2px;
   width: 100%;
+}
+
+input[type=file]:required:valid ~ p {
+  opacity: 0;
 }
 
 .button__submit {

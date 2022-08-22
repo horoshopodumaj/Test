@@ -23,3 +23,34 @@
         document.body.style.overflow = "initial";
     });
 })();
+
+(function () {
+    const inputFile = document.getElementById("file");
+    const buttonSubmit = document.querySelector(".button__submit");
+    const modalForm = document.querySelector(".modal__form");
+    const modalLogo = document.querySelector(".modal__logo");
+    const modalFile = document.querySelector(".modal__file");
+
+    buttonSubmit.addEventListener("click", () => {
+        console.log(buttonSubmit);
+        if (inputFile.validity.valid) {
+            console.log("Ok");
+            return;
+        } else {
+            // const errorLogo = document.createElement("p");
+            // errorLogo.innerHTML = "Файл не выбран";
+            // console.log("oighvgjg");
+            // modalForm.append(errorLogo);
+            modalFile.insertAdjacentHTML(
+                "beforeend",
+                "<p class='modal__error'>Файл не выбран</p>"
+            );
+        }
+        console.log(inputFile.validity);
+        const modalError = document.querySelector(".modal__error");
+
+        if (inputFile.validity.valid) {
+            modalError.innerHTML = "";
+        }
+    });
+})();

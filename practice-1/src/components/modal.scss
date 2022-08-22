@@ -102,24 +102,24 @@
         }
     }
 
+    &__hint {
+        font-size: 0.875rem;
+        line-height: 133%;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 12px;
+        text-align: center;
+        color: var(--grey);
+
+        & span {
+            color: var(--red);
+        }
+    }
+
     &__image {
         background-color: var(--white);
         position: relative;
         @media screen and (max-width: 425px) {
-        }
-
-        & p {
-            font-size: 0.875rem;
-            line-height: 133%;
-            font-weight: 700;
-            margin: 0;
-            margin-bottom: 12px;
-            text-align: center;
-            color: var(--grey);
-
-            & span {
-                color: var(--red);
-            }
         }
 
         & img {
@@ -178,42 +178,53 @@
             visibility: hidden;
             position: absolute;
         }
+    }
 
-        & label {
-            font-size: 18.67px;
-            line-height: 116%;
-            position: absolute;
-            z-index: 2;
-            color: var(--white);
-            top: 55%;
-            left: 60%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            @media screen and (max-width: 767px) {
-                top: 60%;
-                left: 50%;
-            }
-            @media screen and (max-width: 992px) and (min-width: 768px) {
-                left: 50%;
-                top: 50%;
-            }
+    &__file {
+        font-size: 18.67px;
+        line-height: 116%;
+        position: absolute;
+        z-index: 2;
+        color: var(--white);
+        top: 55%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (max-width: 767px) {
+            top: 60%;
+            left: 50%;
+        }
+        @media screen and (max-width: 992px) and (min-width: 768px) {
+            left: 50%;
+            top: 50%;
+        }
 
-            &:hover {
-                text-decoration: underline;
-            }
+        &:hover {
+            text-decoration: underline;
+        }
 
-            & span {
-                display: block;
-            }
+        & span {
+            display: block;
+        }
 
-            & svg {
-                display: block;
-                width: 30px;
-                height: 30px;
-                padding-bottom: 7px;
-            }
+        & svg {
+            display: block;
+            width: 30px;
+            height: 30px;
+            padding-bottom: 7px;
+        }
+    }
+
+    &__error {
+        margin: 0;
+        font-size: 14px;
+        color: var(--red);
+        white-space: nowrap;
+
+        @media screen and (max-width: 767px) {
+            text-align: center;
         }
     }
 }

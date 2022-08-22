@@ -27,7 +27,7 @@
                                 Стать партнёром проекта
                             </div>
                             <div class="modal__content">
-                                <form action="#">
+                                <form action="#" autocomplete="on">
                                     <div class="modal__header">
                                         <div class="modal__group">
                                             <div class="text-group">
@@ -36,7 +36,7 @@
                                                     организации</label
                                                 >
                                                 <div class="text-group__input">
-                                                    <input type="text" required />
+                                                    <input name="name" type="text" required />
                                                 </div>
                                             </div>
                                             <div class="text-group">
@@ -44,7 +44,7 @@
                                                     ><span>✱</span> Телефон</label
                                                 >
                                                 <div class="text-group__input">
-                                                    <input type="tel" required />
+                                                    <input name="phone" placeholder="+7 (123) 456-78-90" type="tel" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required />
                                                 </div>
                                             </div>
                                             <div class="text-group">
@@ -52,12 +52,12 @@
                                                     ><span>✱</span> E-mail</label
                                                 >
                                                 <div class="text-group__input">
-                                                    <input type="email" required />
+                                                    <input name="email" type="email" required />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="modal__image">
-                                            <p>
+                                            <p class="modal__hint">
                                                 <span>✱</span> Логотип (jpeg, png)
                                             </p>
                                             <svg class="modal__icon">
@@ -66,7 +66,8 @@
                                                 ></use>
                                             </svg>
                                             <div class="modal__form">
-                                                <label for="file">
+                                                <label class="modal__file" for="file">
+                                                    <input name="logo" id="file" type="file" accept=".png, .jpeg, .jpg" required />
                                                     <svg>
                                                         <use
                                                             xlink:href="./img/sprite-icons.svg#file"
@@ -75,9 +76,9 @@
                                                     <span>Выберите</span>
                                                     <span>файл</span>
                                                 </label>
-                                                <input id="file" type="file" required />
+                                                
                                             </div>
-                                            <img src="./img/image.png" />
+                                            <img class="modal__logo" src="./img/image.png" />
                                         </div>
                                     </div>
                                     <div class="modal__select">
@@ -87,12 +88,14 @@
                                             ><span>✱</span> Направление</label
                                         >
                                         <select name="#" id="select" required>
+                                            <option value="">
+                                            </option>
                                             <option value="Экология">
                                                 Экология
                                             </option>
-                                            <option value="">Реклама</option>
-                                            <option value="">Машиностроение</option>
-                                            <option value="">
+                                            <option value="Реклама">Реклама</option>
+                                            <option value="Машиностроение">Машиностроение</option>
+                                            <option value="Сельское хозяйство">
                                                 Сельское хозяйство
                                             </option>
                                         </select>
@@ -100,7 +103,7 @@
                                     <div class="modal__body">
                                         <div class="text-group">
                                             <div class="text-group__info">
-                                                <input type="text" />
+                                                <input name='website' type="url" />
                                             </div>
                                             <svg class="text-group__global">
                                                 <use
@@ -110,7 +113,7 @@
                                         </div>
                                         <div class="text-group">
                                             <div class="text-group__info">
-                                                <input type="text" />
+                                                <input name="vk" type="text" />
                                             </div>
                                             <svg class="text-group__vk">
                                                 <use
@@ -120,7 +123,7 @@
                                         </div>
                                         <div class="text-group">
                                             <div class="text-group__info">
-                                                <input type="text" />
+                                                <input name="classmate" type="text" />
                                             </div>
                                             <svg class="text-group__global">
                                                 <use
@@ -130,7 +133,7 @@
                                         </div>
                                         <div class="text-group">
                                             <div class="text-group__info">
-                                                <input type="text" />
+                                                <input name="facebook" type="text" />
                                             </div>
                                             <svg class="text-group__facebook">
                                                 <use
@@ -140,7 +143,7 @@
                                         </div>
                                         <div class="text-group">
                                             <div class="text-group__info">
-                                                <input type="text" />
+                                                <input name="insta" type="text" />
                                             </div>
                                             <svg class="text-group__global">
                                                 <use
@@ -150,7 +153,7 @@
                                         </div>
                                         <div class="text-group">
                                             <div class="text-group__info">
-                                                <input type="text" />
+                                                <input name="youtube" type="text" />
                                             </div>
                                             <svg class="text-group__global">
                                                 <use
@@ -163,7 +166,7 @@
                                                 >Руководитель</label
                                             >
                                             <div class="text-group__input">
-                                                <input type="text" />
+                                                <input name="chief" type="text" />
                                             </div>
                                         </div>
                                     </div>
