@@ -14,3 +14,11 @@
     border: 1px solid #dddddd;
     padding: 5px;
 }
+
+.form {
+    width: 50%;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
