@@ -1,0 +1,27 @@
+1. Написать что выводит данный код.
+
+
+Вывод начинается примерно через 3 секунды:
+
+Bad: 10
+Bad: 12
+Good: 15
+Good: 21
+
+2. Предложите 2 варианта модификации кода, чтобы ответ был следующим: 
+Bad: 10, Bad: 12, Good: 15, Good: 21 
+
+а) 
+
+for (let item of arr) {
+    console.log(item > 13 ? `Good: ${item}` : `Bad: ${item}`);
+}
+
+б)
+
+arr.forEach((item) => {
+    console.log(item > 13 ? `Good: ${item}` : `Bad: ${item}`);
+});
+
+
+
