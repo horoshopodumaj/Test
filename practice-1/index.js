@@ -33,10 +33,14 @@
         if (inputFile.validity.valid) {
             return;
         } else {
-            modalFile.insertAdjacentHTML(
-                "beforeend",
-                "<p class='modal__error'>Файл не выбран</p>"
-            );
+            if (document.querySelector(".modal__error")) {
+                return;
+            } else {
+                modalFile.insertAdjacentHTML(
+                    "beforeend",
+                    "<p class='modal__error'>Файл не выбран</p>"
+                );
+            }
         }
         const modalError = document.querySelector(".modal__error");
 
