@@ -24,7 +24,7 @@
             padding-top: 22px;
             padding-left: 16px;
             padding-bottom: 8px;
-            padding-right: 0;
+            padding-right: 16px;
             border: 1px solid var(--white-2);
             border-radius: 2px;
             width: 100%;
@@ -77,4 +77,14 @@
 
 input[type="file"]:required:valid ~ p {
     opacity: 0;
+}
+
+input[type="url"] {
+    padding-right: 38px;
+    text-overflow: ellipsis;
+}
+
+input[type="text"] {
+    padding-right: 38px;
+    text-overflow: ellipsis;
 }
